@@ -1,0 +1,34 @@
+here are some cases that seem potentially risky and could lead to a 10 minute ban if abused:
+
+Case 7 - Returns a constant value that could trigger a ban.
+
+Case 39 - Sending data, could ban if unexpected data is sent.
+
+Case 42 - Sets global flag byte_3E0AC9, modifying flags may lead to a ban.
+
+Case 47 - Sets a value to 1, changing certain values could trigger cheat detection.
+
+Case 49 - Processes input buffer, may ban for invalid data.
+
+Case 56 - Parses input and sets global pointer, unusual input could be flagged.
+
+Some other cases that stood out:
+
+Case 44 - Calls sub_5D334() with input buffer, may ban for invalid data.
+
+Case 50 - Calls sub_4D1C0() with input buffer, could ban for bad data.
+
+Case 51 - Parses input and checks values, strange input could be risky.
+
+General risks:
+
+    Sending malformed network data.
+    Modifying global state unexpectedly.
+    Providing weird input that gets parsed.
+    Calling functions that do cheat detection.
+
+The safest approach seems to be:
+
+    Avoid cases that take user input.
+    Don't modify global state.
+    Only call whitelisted cases with valid data.
