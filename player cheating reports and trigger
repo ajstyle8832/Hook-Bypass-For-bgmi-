@@ -1,0 +1,29 @@
+some cases that could potentially be related to player cheating reports and triggers:
+
+Case 7 - Returns a constant value that could indicate cheating detected.
+
+Case 39 - Sending unexpected data could trigger a cheating report.
+
+Case 42 - Setting certain flags could indicate cheating and lead to reports.
+
+Case 47 - Modifying key values could be seen as cheating behavior.
+
+Case 49 - Processing input buffer could detect cheating attempts.
+
+Case 56 - Parsing input and setting pointers could reveal cheating.
+
+Some other suspicious cases:
+
+Case 44 - sub_5D334() processes input data which could reveal cheats.
+
+Case 50 - sub_4D1C0() called with user input, could detect cheating.
+
+Case 51 - Checks user input values, strange values could mean cheating.
+
+General behaviors that could enable cheating reports:
+
+    Sending malformed network packets.
+    Calling functions in a weird order or with invalid data.
+    Modifying global state in an unexpected way.
+    Providing suspicious input that gets parsed.
+    Triggering cheat detection logic from unknown functions.
